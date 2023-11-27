@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            width: 50%;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        input[type="text"],
+        textarea {
+            width: calc(100%-24px);
+        }
+
+        label,
+        input,
+        textarea,
+        button {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        th,
+        td {
+            border: 1px;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h2>Kullanıcı Bilgi Formu</h2>
+    <form>
+        <label for="ad">Adınız:</label>
+        <input type="text" id="ad" name="ad">
+        <label for="soyad">Soyadınız:</label>
+        <input type="text" id="soyad" name="soyad">
+        <label for="İletişim">Mesajınız:</label>
+        <textarea name="mesaj" id="mesaj" cols="50" rows="4"></textarea>
+        <button type="submit">Gönder</button>
+    </form>
+    <h2>Kullanıcı Bilgileri Formu</h2>
+    <table>
+        <tr>
+            <th>Ad</th>
+            <th>Soyad</th>
+            <th>Mesajınız</th>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Doe</td>
+            <td>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nam voluptas ratione tenetur nulla assumenda, suscipit ipsa corporis iure deserunt! Cum recusandae ducimus iure dolor perferendis quia officiis, itaque quas rem.</td>
+        </tr>
+        <tr>
+            <td>Jane</td>
+            <td>Smith</td>
+            <td>Lorem ipsum dolor sit amet...</td>
+        </tr>
+    </table>
+</body>
+</html>
