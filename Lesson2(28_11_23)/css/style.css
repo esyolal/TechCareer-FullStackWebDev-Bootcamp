@@ -1,0 +1,47 @@
+/* h1 {
+    color: red
+}
+
+#h2id {
+    color: black;
+    background-color: aqua;
+}
+
+.h3class {
+    color: aqua;
+    background-color: black;
+}
+
+ul li a {
+    text-decoration: none;
+}
+
+.info span {
+    color: red;
+}
+
+.parCl span {
+    color: burlywood;
+}
+
+.info #spanCl {
+    color: blue;
+}
+
+* {
+    font-weight: bold;
+    color:brown;
+} */
+*{
+    color:green;
+}
+
+h1{
+    color:blue !important;
+    color:red;
+}
+
+#logo{
+    color:brown;
+    color:blue;
+}
