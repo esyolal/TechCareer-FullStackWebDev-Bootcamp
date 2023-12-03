@@ -2,28 +2,42 @@ html {
     scroll-behavior: smooth;
 }
 
-h1{
+h1 {
     padding: 0;
     margin: 0;
     font-size: 3rem;
 }
-p{
+
+p {
     padding: 0;
-    margin:10px;
+    margin: 10px;
     font-size: 1.5rem;
-    color:#F5E8C7;
 }
+
 body {
+
     font-family: 'Roboto', sans-serif;
-    background: rgb(54, 48, 98);
-    background: linear-gradient(90deg, rgba(54, 48, 98, 1) 10%, rgba(67, 85, 133, 1) 56%, rgba(129, 143, 180, 1) 100%);
+    background: linear-gradient(0deg, rgba(110, 107, 162, 1) 10%, rgba(192, 135, 170, 1) 47%, rgba(254, 160, 110, 1) 100%) fixed;
     margin: 0;
     padding: 20px;
-    color:#818FB4
+    color: #DBE2EF;
+}
+
+main {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-around;
 
 }
+
+section {
+    text-align: center;
+    margin: 30px;
+}
+
 .profile-picture {
-    margin-top:20px;
+    margin-top: 20px;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -36,18 +50,49 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-.social-media-icons{
+hr {
+    margin-left: 3px;
+    border-top: 5px dotted white;
+    border-bottom: none;
+    border-left: none;
+    border-right: none;
+}
+
+.card {
+    gap: 20px 30px;
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: center;
+    align-content: flex-start;
+
+
+}
+
+.card h3 {}
+
+.card img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: fill;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-media-icons {
     text-align: center;
     margin-top: 20px;
 }
-.social-media-icons a{
-    color:#fff;
+
+.social-media-icons a {
+    color: #fff;
     font-size: 24px;
-    margin:0 10px;
-    
+    margin: 0 10px;
+
 }
-.social-media-icons a:hover{
-   color:#a49494;
+
+.social-media-icons a:hover {
+    color:  rgba(254, 160, 110, 1);
 }
 
 .info {
@@ -59,27 +104,106 @@ body {
     transform: scale(1.06);
 }
 
-.navbar ul {
-    font-size: 1.5rem;
-    list-style-type: none;
+#right,
+#mid,
+#left {
+    flex: 1;
     margin: 0;
     padding: 0;
-    display: flex;
-    justify-content: center;
+    margin-top: 30px;
 }
 
-.navbar ul li {
-    margin-bottom: 20px;
+.form-group {
+    margin-bottom: 10px;
 }
 
-.navbar ul li a {
-    text-decoration: none;
-    color: #818FB4;
-    padding: 8px 16px;
-    border-radius: 15px;
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(100% - 16px);
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+textarea {
+    resize: vertical;
+}
+
+button[type="submit"] {
+    padding: 10px 20px;
+    background-color: rgba(192, 135, 170, 1);
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
     transition: background-color 0.3s ease-in-out;
 }
 
-.navbar ul li a:hover {
-    background-color: #F5E8C7;
+button[type="submit"]:hover {
+    background-color:  rgba(254, 160, 110, 1);
+}
+
+/*Tablet*/
+@media(max-width:768px) {
+    header {
+        padding: 20px;
+    }
+
+    .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar ul li {
+        margin: 0 10px;
+    }
+
+    .navbar ul li a {
+        text-decoration: none;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 15px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .navbar ul li a:hover {
+        background-color: #a49494;
+    }
+
+}
+
+/*Telefon*/
+@media(max-width:576px) {
+    header {
+        padding: 20px;
+    }
+
+    .navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .navbar ul li {
+        margin: 0 10px;
+    }
+
+    .navbar ul li a {
+        text-decoration: none;
+        color: white;
+        padding: 8px 16px;
+        border-radius: 15px;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    .navbar ul li a:hover {
+        background-color: #a49494;
+    }
+
 }
