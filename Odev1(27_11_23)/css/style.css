@@ -17,7 +17,9 @@ p {
 body {
 
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(0deg, rgba(110, 107, 162, 1) 10%, rgba(192, 135, 170, 1) 47%, rgba(254, 160, 110, 1) 100%) fixed;
+    background: linear-gradient(0deg, rgba(110, 107, 162, 1) 10%, rgba(192, 135, 170, 1) 47%, rgba(254, 160, 110, 1) 100%) ;
+    background-repeat: no-repeat;
+  background-attachment: fixed;
     margin: 0;
     padding: 20px;
     color: #DBE2EF;
@@ -56,15 +58,7 @@ section {
     border-radius: 80px 20px 20px 15px;
     padding: 10px;
     margin: 10px;
-    opacity: 0.95;
-}
-hr {
-    margin-left: 3px;
-    border-top: 5px dotted white;
-    border-bottom: none;
-    border-left: none;
-    border-right: none;
-    opacity: 0.3;
+    opacity: 0.85;
 }
 
 .card {
@@ -85,10 +79,11 @@ hr {
     height: 100px;
     border-radius: 50%;
     object-fit: fill;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.5s ease-in-out;
 }
 
 .social-media-icons {
+    display: inline-block;
     text-align: center;
     margin-top: 20px;
     transition: transform 0.5s ease-in-out;
@@ -101,7 +96,7 @@ hr {
 }
 
 .social-media-icons:hover{
-    transform: scale(1.5);
+    transform: scale(1.2);
 }
 .social-media-icons a:hover {
 
@@ -114,7 +109,7 @@ hr {
 }
 
 .profile-picture img:hover {
-    transform: scale(1.06);
+    transform: scale(1.1);
 }
 
 #right,
@@ -123,7 +118,7 @@ hr {
     flex: 1;
     margin: 0;
     padding: 0;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 .form-group {
@@ -155,68 +150,4 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
     background-color:  rgba(254, 160, 110, 1);
-}
-
-/*Tablet*/
-@media(max-width:768px) {
-    header {
-        padding: 20px;
-    }
-
-    .navbar ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .navbar ul li {
-        margin: 0 10px;
-    }
-
-    .navbar ul li a {
-        text-decoration: none;
-        color: white;
-        padding: 8px 16px;
-        border-radius: 15px;
-        transition: background-color 0.3s ease-in-out;
-    }
-
-    .navbar ul li a:hover {
-        background-color: #a49494;
-    }
-
-}
-
-/*Telefon*/
-@media(max-width:576px) {
-    header {
-        padding: 20px;
-    }
-
-    .navbar ul {
-        list-style-type: none;
-        margin: 0;
-        padding: 0;
-        display: flex;
-        justify-content: space-between;
-    }
-
-    .navbar ul li {
-        margin: 0 10px;
-    }
-
-    .navbar ul li a {
-        text-decoration: none;
-        color: white;
-        padding: 8px 16px;
-        border-radius: 15px;
-        transition: background-color 0.3s ease-in-out;
-    }
-
-    .navbar ul li a:hover {
-        background-color: #a49494;
-    }
-
 }
