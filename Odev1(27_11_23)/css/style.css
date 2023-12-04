@@ -49,13 +49,22 @@ section {
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
 }
-
+.baslik{
+    display: block;
+    flex-wrap: 30px;
+    background-color: rgb(202, 165, 144);
+    border-radius: 80px 20px 20px 15px;
+    padding: 10px;
+    margin: 10px;
+    opacity: 0.95;
+}
 hr {
     margin-left: 3px;
     border-top: 5px dotted white;
     border-bottom: none;
     border-left: none;
     border-right: none;
+    opacity: 0.3;
 }
 
 .card {
@@ -65,7 +74,7 @@ hr {
     align-items: center;
     justify-content: center;
     align-content: flex-start;
-
+    margin: 20px;
 
 }
 
@@ -82,16 +91,20 @@ hr {
 .social-media-icons {
     text-align: center;
     margin-top: 20px;
+    transition: transform 0.5s ease-in-out;
 }
 
 .social-media-icons a {
     color: #fff;
     font-size: 24px;
     margin: 0 10px;
-
 }
 
+.social-media-icons:hover{
+    transform: scale(1.5);
+}
 .social-media-icons a:hover {
+
     color:  rgba(254, 160, 110, 1);
 }
 
