@@ -1,11 +1,32 @@
-html {
-    scroll-behavior: smooth;
+body {
+    text-shadow: -2px 0px 10px #CE42B3;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(0deg, rgba(110, 107, 162, 1) 10%, rgba(192, 135, 170, 1) 47%, rgba(254, 160, 110, 1) 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    color: #DBE2EF;
+}
+
+main {
+    display: flex;
+    margin: 0;
+    padding: 0;
+    justify-content: space-between;
+
 }
 
 h1 {
     padding: 0;
     margin: 0;
     font-size: 3rem;
+
+}
+
+h2 {
+    text-decoration: underline;
 }
 
 p {
@@ -14,31 +35,13 @@ p {
     font-size: 1.5rem;
 }
 
-body {
-
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(0deg, rgba(110, 107, 162, 1) 10%, rgba(192, 135, 170, 1) 47%, rgba(254, 160, 110, 1) 100%) ;
-    background-repeat: no-repeat;
-  background-attachment: fixed;
-    margin: 0;
-    padding: 20px;
-    color: #DBE2EF;
-}
-
-main {
-    display: flex;
-    margin: 0;
-    padding: 0;
-    justify-content: space-around;
-
-}
-
 section {
     text-align: center;
     margin: 30px;
 }
 
 .profile-picture {
+    display: inline-block;
     margin-top: 20px;
     text-align: center;
     margin-bottom: 20px;
@@ -51,11 +54,9 @@ section {
     object-fit: cover;
     transition: transform 0.3s ease-in-out;
 }
-.baslik{
+
+.baslik {
     display: block;
-    flex-wrap: 30px;
-    background-color: rgb(202, 165, 144);
-    border-radius: 80px 20px 20px 15px;
     padding: 10px;
     margin: 10px;
     opacity: 0.85;
@@ -64,15 +65,9 @@ section {
 .card {
     gap: 20px 30px;
     display: flex;
-    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
-    align-content: flex-start;
-    margin: 20px;
-
 }
-
-.card h3 {}
 
 .card img {
     width: 100px;
@@ -95,18 +90,16 @@ section {
     margin: 0 10px;
 }
 
-.social-media-icons:hover{
+.social-media-icons:hover {
     transform: scale(1.2);
 }
+
 .social-media-icons a:hover {
 
-    color:  rgba(254, 160, 110, 1);
+    color: rgba(254, 160, 110, 1);
 }
 
-.info {
-    display: inline;
-    text-align: center;
-}
+
 
 .profile-picture img:hover {
     transform: scale(1.1);
@@ -134,10 +127,6 @@ textarea {
     border: 1px solid #ccc;
 }
 
-textarea {
-    resize: vertical;
-}
-
 button[type="submit"] {
     padding: 10px 20px;
     background-color: rgba(192, 135, 170, 1);
@@ -149,5 +138,40 @@ button[type="submit"] {
 }
 
 button[type="submit"]:hover {
-    background-color:  rgba(254, 160, 110, 1);
+    background-color: rgba(254, 160, 110, 1);
+}
+
+/*Tablet*/
+@media(max-width:768px) {
+    main {
+        flex-direction: column;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: center;
+    }
+    .social-media-icons {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .social-media-icons a {
+        margin: 0 5px;
+    }
+}
+
+/*Telefon*/
+@media(max-width:576px) {
+    .profile-picture img,
+    .social-media-icons {
+        transform: none;
+    }
+
+    .profile-picture img:hover,
+    .social-media-icons:hover {
+        transform: none;
+    }
+
 }

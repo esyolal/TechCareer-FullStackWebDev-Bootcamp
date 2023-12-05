@@ -3,6 +3,8 @@
 
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Emre Sebati Yolal - 2023</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
@@ -14,10 +16,14 @@
 </head>
 
 <body>
-    <img src="img/palmtree.png" style="opacity: 0.1;position:fixed;margin: 265px -200px; pointer-events: none; transform: rotate(30deg); " alt="">
-    <img src="img/palmtree.png" style="opacity: 0.1;position:fixed;margin: 165px 1400px; pointer-events: none;  transform: rotate(320deg);   " alt="">
+    <img src="img/palmtree.png"
+        style="opacity: 0.1;position:fixed;margin: 265px -200px; pointer-events: none; transform: rotate(40deg); background-attachment: fixed;  z-index: -1;"
+        alt="">
+    <img src="img/palmtree.png"
+        style="opacity: 0.1;position:fixed;margin: 265px 1300px; pointer-events: none;  transform: rotate(300deg); background-attachment: fixed;  z-index: -1;"
+        alt="">
     <header>
-        
+
         <section id="top">
             <div class="profile-picture">
                 <img src="https://avatars.githubusercontent.com/u/29539711?v=4" alt="esy" width="100px">
@@ -33,7 +39,7 @@
                 <a href="https://www.linkedin.com/in/esyolal/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
             </div>
         </section>
-       <!--  <nav class="navbar">
+        <!--  <nav class="navbar">
             <ul>
                 <li><a href="#Egitimler">Eğitimler</a></li>
                 <li><a href="#Kurslar">Kurslar</a></li>
@@ -43,47 +49,55 @@
     </header>
     <main>
         <section id="left">
-            <div class="baslik"><h2>Eğitimler</h2></div>
-            
-            <div class="card">
-                <img src="http://www.mu.edu.tr/Icerik/Sayfa/bidb.mu.edu.tr/logo1_ufak.png" alt="Proje Resmi" style="border-radius: 0%;">
-                <h3>Bilgisayar Programcılığı</h3>
-            </div>
-            <div class="card">
-                <img src="https://upload.wikimedia.org/wikipedia/tr/d/d8/Avrasya_%C3%9Cniversitesi_logosu.jpg" width="100px" alt="Proje Resmi">
-                <h3>Bilgisayar Mühendisliği</h3>
+            <div class="baslik">
+                <h2>Eğitimler</h2>
+                <div class="card">
+                    <img src="http://www.mu.edu.tr/Icerik/Sayfa/bidb.mu.edu.tr/logo1_ufak.png" alt="Proje Resmi"
+                        style="border-radius: 0%;">
+                    <h3>Bilgisayar Programcılığı</h3>
+                </div>
+                <div class="card">
+                    <img src="https://upload.wikimedia.org/wikipedia/tr/d/d8/Avrasya_%C3%9Cniversitesi_logosu.jpg"
+                        width="100px" alt="Proje Resmi">
+                    <h3>Bilgisayar Mühendisliği</h3>
+                </div>
             </div>
         </section>
         <section id="mid">
-            <div class="baslik"><h2>Bootcampler</h2></div>
-            
-            <div class="card">
-                <img src="https://www.techcareer.net/assets/images/common/techcareer-logo-og-image.png" width="100px" alt="Proje Resmi">
-                <h3>Full Stack Web Developer Bootcamp</h3>
+            <div class="baslik">
+                <h2>Bootcampler</h2>
+                <div class="card">
+                    <img src="https://www.techcareer.net/assets/images/common/techcareer-logo-og-image.png"
+                        width="100px" alt="Proje Resmi">
+                    <h3>Full Stack Web Developer Bootcamp</h3>
+                </div>
             </div>
         </section>
         <section id="right">
-            <div class="baslik"><h2>Bana Ulaşın</h2></div>
-        
-            <form action="#" method="post">
-                <div class="form-group">
-                    <label for="name">Adınız:</label>
-                    <input type="text" id="name" name="name" required>
-                </div>
-                <div class="form-group">
-                    <label for="email">Email Adresiniz:</label>
-                    <input type="email" name="email" id="email" required>
-                </div>
-                <div class="form-group">
-                    <label for="message">Mesajınız:</label>
-                    <textarea name="message" id="message" rows="5" required></textarea>
-                </div>
-                <button type="submit" class="btn">Gönder</button>
+            <div class="baslik">
+
+
+                <h2>Bana Ulaşın</h2>
+                <form action="#" method="post">
+                    <div class="form-group">
+                        <label for="name">Adınız:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Adresiniz:</label>
+                        <input type="email" name="email" id="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Mesajınız:</label>
+                        <textarea name="message" id="message" rows="5" required></textarea>
+                    </div>
+            </div>
+            <button type="submit" class="btn">Gönder</button>
             </form>
         </section>
     </main>
     <footer>
-        
+
     </footer>
 </body>
 
