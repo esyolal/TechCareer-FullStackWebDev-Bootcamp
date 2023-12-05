@@ -17,6 +17,7 @@ main {
 footer{
     margin-top:35px;
     text-align: center;
+    user-select: none;
 }
 h1 {
     padding: 0;
@@ -120,7 +121,7 @@ section {
     margin-bottom: 10px;
 }
 .form-group input,textarea{
-    opacity: 0.5;
+    opacity: 0.65;
 }
 input[type="text"],
 input[type="email"],
