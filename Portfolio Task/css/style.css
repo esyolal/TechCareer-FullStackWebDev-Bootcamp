@@ -1,15 +1,12 @@
 body {
     text-shadow: -2px 0px 10px #CE42B3;
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(0deg, rgba(110, 107, 162, 1) 10%, rgba(192, 135, 170, 1) 47%, rgba(254, 160, 110, 1) 100%);
-    background-repeat: no-repeat;
-    background-size: cover;
+    background: linear-gradient(rgba(110, 107, 162, 1), rgba(192, 135, 170, 1), rgba(254, 160, 110, 1));
     background-attachment: fixed;
     margin: 0;
     padding: 0;
     color: #DBE2EF;
 }
-
 main {
     display: flex;
     margin: 0;
@@ -119,9 +116,12 @@ section {
 }
 
 .form-group {
+   
     margin-bottom: 10px;
 }
-
+.form-group input,textarea{
+    opacity: 0.5;
+}
 input[type="text"],
 input[type="email"],
 textarea {
