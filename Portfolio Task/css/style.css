@@ -6,7 +6,8 @@ body {
     margin: 0;
     padding: 0;
     color: #DBE2EF;
-}
+;}
+
 main {
     display: flex;
     margin: 0;
@@ -14,11 +15,13 @@ main {
     justify-content: space-between;
 
 }
-footer{
-    margin-top:35px;
+
+footer {
+    margin-top: 35px;
     text-align: center;
     user-select: none;
 }
+
 h1 {
     padding: 0;
     margin: 0;
@@ -117,12 +120,15 @@ section {
 }
 
 .form-group {
-   
+
     margin-bottom: 10px;
 }
-.form-group input,textarea{
+
+.form-group input,
+textarea {
     opacity: 0.65;
 }
+
 input[type="text"],
 input[type="email"],
 textarea {
@@ -156,6 +162,7 @@ button[type="submit"]:hover {
         flex-direction: column;
         align-items: center;
     }
+
     .social-media-icons {
         display: flex;
         justify-content: center;
@@ -169,6 +176,7 @@ button[type="submit"]:hover {
 
 /*Telefon*/
 @media(max-width:576px) {
+
     .profile-picture img,
     .social-media-icons {
         transform: none;
@@ -180,3 +188,58 @@ button[type="submit"]:hover {
     }
 
 }
+
+.loader {
+    position: fixed;
+    width: 48px;
+    height: 48px;
+  }
+  .loader::before , .loader::after{
+    content: '';
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50% , -50%);
+    width: 48em;
+    height: 48em;
+    background-image:
+      radial-gradient(circle 10px, #FFF 100%, transparent 0),
+      radial-gradient(circle 10px, #FFF 100%, transparent 0),
+      radial-gradient(circle 10px, #FFF 100%, transparent 0),
+      radial-gradient(circle 10px, #FFF 100%, transparent 0),
+      radial-gradient(circle 10px, #FFF 100%, transparent 0),
+      radial-gradient(circle 10px, #FFF 100%, transparent 0),
+      radial-gradient(circle 10px, #FFF 100%, transparent 0),
+      radial-gradient(circle 10px, #FFF 100%, transparent 0);
+    background-position: 0em -18em, 0em 18em, 18em 0em, -18em 0em,
+                         13em -13em, -13em -13em, 13em 13em, -13em 13em;
+      background-repeat: no-repeat;
+    font-size: 0.5px;
+    border-radius: 50%;
+    animation: blast 1s ease-in infinite;
+  }
+  .loader::after {
+    font-size: 1px;
+    background: #fff;
+    animation: bounce 1s ease-in infinite;
+  }
+  
+
+
+  @keyframes bounce {
+    0% , 100%{ font-size: 0.75px }
+    50% { font-size: 1.5px }
+  }
+  @keyframes blast {
+    0% , 40% {
+      font-size: 0.5px;
+    }
+    70% {
+      opacity: 1;
+      font-size: 4px;
+    }
+     100% {
+       font-size: 6px;
+      opacity: 0;
+    }
+  }

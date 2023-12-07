@@ -13,8 +13,10 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
-<body>
 
+<body>
+    <span class="loader"></span>
+    <div class="content" style="display:none;">
     <img src="img/palmtree.png"
         style="opacity: 0.1;position:fixed;margin: 265px -200px; pointer-events: none; transform: rotate(40deg); background-attachment: fixed;  z-index: -1;"
         alt="">
@@ -43,13 +45,13 @@
             <div class="baslik">
                 <h2>Eğitimler</h2>
                 <div class="card">
-                    <img src="http://www.mu.edu.tr/Icerik/Sayfa/bidb.mu.edu.tr/logo1_ufak.png" alt="Proje Resmi"
-                        style="border-radius: 0%;">
+                    <a href="https://www.mu.edu.tr/tr" target="_blank"><img src="http://www.mu.edu.tr/Icerik/Sayfa/bidb.mu.edu.tr/logo1_ufak.png" alt="Proje Resmi"
+                        style="border-radius: 0%;"></a>
                     <h3>Bilgisayar Programcılığı</h3>
                 </div>
                 <div class="card">
-                    <img src="https://upload.wikimedia.org/wikipedia/tr/d/d8/Avrasya_%C3%9Cniversitesi_logosu.jpg"
-                        width="100px" alt="Proje Resmi">
+                    <a href="https://avrasya.edu.tr/" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/tr/d/d8/Avrasya_%C3%9Cniversitesi_logosu.jpg"
+                        width="100px" alt="Proje Resmi"></a>
                     <h3>Bilgisayar Mühendisliği</h3>
                 </div>
             </div>
@@ -89,6 +91,15 @@
     <footer>
         <h5>&copy; 2023 Emre Sebati Yolal Tüm Hakları Saklıdır.</h5>
     </footer>
+    <script>
+            document.addEventListener("DOMContentLoaded", function () {
+            setTimeout(function() {
+                document.querySelector(".loader").style.display = "none";
+                document.querySelector(".content").style.display = "block";
+            }, 3000);
+        });
+    </script>
+    </div>
 </body>
 
 </html>
