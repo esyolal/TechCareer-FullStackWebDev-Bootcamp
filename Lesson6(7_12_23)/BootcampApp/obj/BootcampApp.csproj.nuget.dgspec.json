@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Emre\\Desktop\\webdev\\TechCareer-FullStackWebDev-Bootcamp\\lesson6(7_12_23)\\bootcampapp\\BootcampApp.csproj": {}
+    "C:\\Users\\Emre\\Desktop\\webdev\\TechCareer-FullStackWebDev-Bootcamp\\Lesson6(7_12_23)\\BootcampApp\\BootcampApp.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Emre\\Desktop\\webdev\\TechCareer-FullStackWebDev-Bootcamp\\lesson6(7_12_23)\\bootcampapp\\BootcampApp.csproj": {
+    "C:\\Users\\Emre\\Desktop\\webdev\\TechCareer-FullStackWebDev-Bootcamp\\Lesson6(7_12_23)\\BootcampApp\\BootcampApp.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Emre\\Desktop\\webdev\\TechCareer-FullStackWebDev-Bootcamp\\lesson6(7_12_23)\\bootcampapp\\BootcampApp.csproj",
+        "projectUniqueName": "C:\\Users\\Emre\\Desktop\\webdev\\TechCareer-FullStackWebDev-Bootcamp\\Lesson6(7_12_23)\\BootcampApp\\BootcampApp.csproj",
         "projectName": "BootcampApp",
-        "projectPath": "C:\\Users\\Emre\\Desktop\\webdev\\TechCareer-FullStackWebDev-Bootcamp\\lesson6(7_12_23)\\bootcampapp\\BootcampApp.csproj",
+        "projectPath": "C:\\Users\\Emre\\Desktop\\webdev\\TechCareer-FullStackWebDev-Bootcamp\\Lesson6(7_12_23)\\BootcampApp\\BootcampApp.csproj",
         "packagesPath": "C:\\Users\\Emre\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Emre\\Desktop\\webdev\\TechCareer-FullStackWebDev-Bootcamp\\lesson6(7_12_23)\\bootcampapp\\obj\\",
+        "outputPath": "C:\\Users\\Emre\\Desktop\\webdev\\TechCareer-FullStackWebDev-Bootcamp\\Lesson6(7_12_23)\\BootcampApp\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\Emre\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Emre\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
