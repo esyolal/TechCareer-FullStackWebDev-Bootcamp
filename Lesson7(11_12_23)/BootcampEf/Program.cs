@@ -8,8 +8,8 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<DataContext>(options=>{
     var config = builder.Configuration;
     var connectionString = config.GetConnectionString("database");
-    options.useSqlite(connectionString);
-})
+    options.UseSqlite(connectionString);
+});
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.

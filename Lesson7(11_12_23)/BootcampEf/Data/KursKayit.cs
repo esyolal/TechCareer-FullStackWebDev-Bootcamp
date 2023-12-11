@@ -1,3 +1,5 @@
+using System.ComponentModel.DataAnnotations;
+
 namespace BootcampEf.Data{
     public class KursKayit{
         [Key]
