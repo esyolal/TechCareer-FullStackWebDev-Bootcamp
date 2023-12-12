@@ -5,9 +5,8 @@ using Microsoft.EntityFrameworkCore;
 namespace BootcampEf.Controllers
 {
     public class OgrenciController : Controller{
-
+        
         private readonly DataContext _context;
-
         public OgrenciController(DataContext context){
             _context = context;
         }
@@ -33,7 +32,10 @@ namespace BootcampEf.Controllers
                 return NotFound();
             }
             
-            var ogr = await _context.Ogrenciler.FindAsync(id);
+            var ogr = await _context.Ogrenciler
+            .Include(o=>o.KursKayitlari)
+            .ThenInclude(o=>o.Kurs)
+            .FirstOrDefaultAsync(o=>o.OgrenciId ==id);
             //var ogr = await _context.Ogrenciler.FirstOrDefaultAsync(o => o.OgrenciId == id);
 
             if(ogr == null){
@@ -67,5 +69,30 @@ namespace BootcampEf.Controllers
             
         }
 
+        [HttpGet]
+        public async Task<IActionResult> Delete(int? id){
+            if(id == null){
+                return NotFound();
+            }
+            var ogrenci = await _context.Ogrenciler.FindAsync(id);
+
+            if(ogrenci == null){
+                return NotFound();
+            }    
+            return View(ogrenci);
+        }
+        [HttpPost]
+
+        //Model Biding işlemi yaptık.
+        //Tag helper kullanacaksak model biding yapmak lazım
+        public async Task<IActionResult> Delete([FromForm]int id){
+            var ogrenci = await _context.Ogrenciler.FindAsync(id);
+            if(ogrenci==null){
+                return NotFound();
+            }
+            _context.Ogrenciler.Remove(ogrenci);
+            await _context.SaveChangesAsync();
+            return RedirectToAction("Index");
+        }
     }
 }
