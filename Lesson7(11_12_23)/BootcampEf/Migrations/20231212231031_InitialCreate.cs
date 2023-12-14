@@ -12,21 +12,6 @@ namespace BootcampEf.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "KursKayitlari",
-                columns: table => new
-                {
-                    KayitId = table.Column<int>(type: "INTEGER", nullable: false)
-                        .Annotation("Sqlite:Autoincrement", true),
-                    OgrenciId = table.Column<int>(type: "INTEGER", nullable: false),
-                    KursId = table.Column<int>(type: "INTEGER", nullable: false),
-                    KayitTarihi = table.Column<DateTime>(type: "TEXT", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_KursKayitlari", x => x.KayitId);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Kurslar",
                 columns: table => new
                 {
@@ -54,6 +39,43 @@ namespace BootcampEf.Migrations
                 {
                     table.PrimaryKey("PK_Ogrenciler", x => x.OgrenciId);
                 });
+
+            migrationBuilder.CreateTable(
+                name: "KursKayitlari",
+                columns: table => new
+                {
+                    KayitId = table.Column<int>(type: "INTEGER", nullable: false)
+                        .Annotation("Sqlite:Autoincrement", true),
+                    OgrenciId = table.Column<int>(type: "INTEGER", nullable: false),
+                    KursId = table.Column<int>(type: "INTEGER", nullable: false),
+                    KayitTarihi = table.Column<DateTime>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_KursKayitlari", x => x.KayitId);
+                    table.ForeignKey(
+                        name: "FK_KursKayitlari_Kurslar_KursId",
+                        column: x => x.KursId,
+                        principalTable: "Kurslar",
+                        principalColumn: "KursId",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_KursKayitlari_Ogrenciler_OgrenciId",
+                        column: x => x.OgrenciId,
+                        principalTable: "Ogrenciler",
+                        principalColumn: "OgrenciId",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KursKayitlari_KursId",
+                table: "KursKayitlari",
+                column: "KursId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_KursKayitlari_OgrenciId",
+                table: "KursKayitlari",
+                column: "OgrenciId");
         }
 
         /// <inheritdoc />

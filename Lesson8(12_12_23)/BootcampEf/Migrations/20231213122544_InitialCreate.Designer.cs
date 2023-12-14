@@ -11,7 +11,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace BootcampEf.Migrations
 {
     [DbContext(typeof(DataContext))]
-    [Migration("20231211205535_InitialCreate")]
+    [Migration("20231213122544_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -51,6 +51,10 @@ namespace BootcampEf.Migrations
 
                     b.HasKey("KayitId");
 
+                    b.HasIndex("KursId");
+
+                    b.HasIndex("OgrenciId");
+
                     b.ToTable("KursKayitlari");
                 });
 
@@ -75,6 +79,35 @@ namespace BootcampEf.Migrations
                     b.HasKey("OgrenciId");
 
                     b.ToTable("Ogrenciler");
+                });
+
+            modelBuilder.Entity("BootcampEf.Data.KursKayit", b =>
+                {
+                    b.HasOne("BootcampEf.Data.Kurs", "Kurs")
+                        .WithMany("KursKayitlari")
+                        .HasForeignKey("KursId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("BootcampEf.Data.Ogrenci", "Ogrenci")
+                        .WithMany("KursKayitlari")
+                        .HasForeignKey("OgrenciId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Kurs");
+
+                    b.Navigation("Ogrenci");
+                });
+
+            modelBuilder.Entity("BootcampEf.Data.Kurs", b =>
+                {
+                    b.Navigation("KursKayitlari");
+                });
+
+            modelBuilder.Entity("BootcampEf.Data.Ogrenci", b =>
+                {
+                    b.Navigation("KursKayitlari");
                 });
 #pragma warning restore 612, 618
         }
